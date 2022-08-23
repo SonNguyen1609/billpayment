@@ -1,8 +1,15 @@
 {
   "name": "sonnguyen/module-billpayment",
   "description": "Print bill payment after success",
+  "version": "1.0.0",
+  "config": {
+    "sort-packages": true
+  },
   "type": "magento2-module",
-  "license": "GPL-3.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
   "authors": [
     {
       "name": "Son Nguyen",
@@ -10,10 +17,11 @@
     }
   ],
   "require": {
-    "php": "~7.1|~7.2"
+    "php": "~7.1.3||~7.2.0",
   },
-  "version": "1.0.0",
-  "minimum-stability": "dev",
+  "suggest": {
+    "magento/module-webapi": "100.3.*"
+},
   "autoload": {
     "files": [
       "registration.php"
