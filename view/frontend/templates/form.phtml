@@ -1,0 +1,9 @@
+<?php
+/**
+ * @var $block \Wiki\BillPayment\Block\Success
+ */
+?>
+<form method="post" action="<?= $this->getBaseUrl() ?>">
+    <input type="hidden" name="order_id" value="<?=$block->getOrderId()?>">
+    <button class="a-btn variant-yellow w-45" type="submit"><?= /* @escapeNotVerified */ __('View Billing') ?></button>
+</form>

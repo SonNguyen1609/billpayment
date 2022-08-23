@@ -1,0 +1,22 @@
+{
+  "name": "sonnguyen/module-billpayment",
+  "description": "Print bill payment after success",
+  "type": "magento2-module",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Son Nguyen",
+      "email": "son.nguyen@wiki-solution.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Wiki\\BillPayment\\": ""
+    }
+  }
+}

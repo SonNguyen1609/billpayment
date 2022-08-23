@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Preorder
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2016 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<div class="wk-loading-mask wk-display-none">
+    <div class="wk-loader"></div>
+</div>
+<?php
+$helper = $this->helper('Webkul\Preorder\Helper\Data');
+$productId = $this->getProduct()->getId();
+$flag = 0;
+if ($helper->isPreorder($productId)) {
+    $flag = 1;
+}
+$payHtml = $helper->getPayPreOrderHtml($productId);
+// $msg = $helper->getPreOrderInfoBlock($productId);
+$msg = $helper->getPreOrderInfo($productId);
+$url = $helper->getCheckConfigUrl();
+$data = json_encode(["payHtml" => $payHtml, "msg" => $msg, "flag" => $flag, "url" => $url, "productId" => $productId]);
+?>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "Webkul_Preorder/js/view": <?php echo $data ?>
+        }
+    }
+</script>
