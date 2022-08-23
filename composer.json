@@ -9,8 +9,11 @@
       "email": "son.nguyen@wiki-solution.com"
     }
   ],
+  "require": {
+    "php": "~7.1|~7.2"
+  },
+  "version": "1.0.0",
   "minimum-stability": "dev",
-  "require": {},
   "autoload": {
     "files": [
       "registration.php"
@@ -20,3 +23,4 @@
     }
   }
 }
+

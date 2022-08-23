@@ -1,6 +1,6 @@
 # Module Wiki BillPayment
 
-    ``wiki/module-billpayment``
+    ``sonnguyen/module-billpayment``
 
 - [Main Functionalities](#markdown-header-main-functionalities)
 - [Installation](#markdown-header-installation)
@@ -29,7 +29,7 @@ Print bill payment after success
     - public repository `packagist.org`
     - public github repository as vcs
 - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
-- Install the module composer by running `composer require wiki/module-billpayment`
+- Install the module composer by running `composer require sonnguyen/module-billpayment`
 - enable the module by running `php bin/magento module:enable Wiki_BillPayment`
 - apply database updates by running `php bin/magento setup:upgrade`\*
 - Flush the cache by running `php bin/magento cache:flush`
